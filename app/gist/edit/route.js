@@ -9,7 +9,7 @@ export default GistRoute.extend({
   },
 
   setupController() {
-    this._super.apply(this, arguments);
+    this._super(...arguments);
 
     let gistController = this.controllerFor('gist');
     Ember.run.schedule('afterRender', function() {
