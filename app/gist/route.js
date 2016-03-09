@@ -9,6 +9,7 @@ export default Ember.Route.extend({
   titleToken: Ember.computed.readOnly('controller.model.description'),
 
   beforeModel () {
+    window.s = this.get('store');
     return this.session.fetch('github-oauth2').catch(function() {
       // Swallow error for now
     });
