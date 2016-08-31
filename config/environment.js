@@ -62,7 +62,6 @@ module.exports = function(environment) {
 
   if (environment === 'production') {
     ENV.githubOauthUrl = 'https://ember-twiddle.herokuapp.com/authenticate/';
-    ENV.assetsHost = '//assets.ember-twiddle.com/';
     ENV.torii = {
       sessionServiceName: 'session',
       providers: {
