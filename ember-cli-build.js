@@ -13,11 +13,6 @@ module.exports = function(defaults) {
   var isProductionLikeBuild = ['production', 'staging'].indexOf(env) > -1;
   var isFastboot = process.env.EMBER_CLI_FASTBOOT;
   var prepend = null;
-
-  if(isProductionLikeBuild) {
-     prepend = env === 'production' ? '//assets.ember-twiddle.com/' : '//canary-assets.ember-twiddle.com/';
-  }
-
   var blueprintsCode = getEmberCLIBlueprints();
 
   var app = new EmberApp(defaults, {
