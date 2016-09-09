@@ -7,7 +7,7 @@ module.exports = function(environment) {
     rootURL: '/',
     locationType: 'auto',
     host: 'https://api.github.com',
-    githubOauthUrl: 'http://localhost:9999/authenticate/',
+    githubOauthUrl: 'http://gatekeeper-twiddle.herokuapp.com/authenticate/',
     addonUrl: 'https://emw2ujz4u1.execute-api.us-east-1.amazonaws.com/canary/addon',
     assetsHost: '/',
     maxNumFilesInitiallyExpanded: 12,
@@ -29,7 +29,7 @@ module.exports = function(environment) {
       providers: {
         'github-oauth2': {
           scope: 'gist',
-          apiKey: '2b84ab967ef8266ca0dc'
+          apiKey: 'c2ce28bdd511881d315d'
         }
       }
     }
@@ -61,14 +61,14 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.githubOauthUrl = 'https://ember-twiddle.herokuapp.com/authenticate/';
-    ENV.assetsHost = '//assets.ember-twiddle.com/';
+    ENV.githubOauthUrl = 'https://twiddlefork-gatekeeper.herokuapp.com/authenticate/';
+    ENV.assetsHost = '/';
     ENV.torii = {
       sessionServiceName: 'session',
       providers: {
         'github-oauth2': {
           scope: 'gist',
-          apiKey: '3df37009938c0790d952'
+          apiKey: '66eb4bcb1d6986b19ee0'
         }
       }
     };
